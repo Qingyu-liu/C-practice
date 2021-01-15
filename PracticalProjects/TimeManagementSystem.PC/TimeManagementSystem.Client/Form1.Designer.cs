@@ -34,15 +34,17 @@ namespace TimeManagementSystem.PC
             this.DeleteButton = new System.Windows.Forms.Button();
             this.CompleteButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
+            this.theStopList = new System.Windows.Forms.ListBox();
+            this.theComplementList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // TheTaskList
             // 
             this.TheTaskList.FormattingEnabled = true;
             this.TheTaskList.ItemHeight = 12;
-            this.TheTaskList.Location = new System.Drawing.Point(34, 47);
+            this.TheTaskList.Location = new System.Drawing.Point(34, 13);
             this.TheTaskList.Name = "TheTaskList";
-            this.TheTaskList.Size = new System.Drawing.Size(586, 352);
+            this.TheTaskList.Size = new System.Drawing.Size(485, 184);
             this.TheTaskList.TabIndex = 0;
             this.TheTaskList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -86,11 +88,33 @@ namespace TimeManagementSystem.PC
             this.StopButton.UseVisualStyleBackColor = true;
             this.StopButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // theStopList
+            // 
+            this.theStopList.FormattingEnabled = true;
+            this.theStopList.ItemHeight = 12;
+            this.theStopList.Location = new System.Drawing.Point(34, 203);
+            this.theStopList.Name = "theStopList";
+            this.theStopList.Size = new System.Drawing.Size(485, 112);
+            this.theStopList.TabIndex = 10;
+            this.theStopList.SelectedIndexChanged += new System.EventHandler(this.theStopList_SelectedIndexChanged_1);
+            // 
+            // theComplementList
+            // 
+            this.theComplementList.FormattingEnabled = true;
+            this.theComplementList.ItemHeight = 12;
+            this.theComplementList.Location = new System.Drawing.Point(34, 321);
+            this.theComplementList.Name = "theComplementList";
+            this.theComplementList.Size = new System.Drawing.Size(485, 112);
+            this.theComplementList.TabIndex = 11;
+            this.theComplementList.SelectedIndexChanged += new System.EventHandler(this.theComplementList_SelectedIndexChanged_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.theComplementList);
+            this.Controls.Add(this.theStopList);
             this.Controls.Add(this.StopButton);
             this.Controls.Add(this.CompleteButton);
             this.Controls.Add(this.DeleteButton);
@@ -110,6 +134,8 @@ namespace TimeManagementSystem.PC
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button CompleteButton;
         private System.Windows.Forms.Button StopButton;
+        private System.Windows.Forms.ListBox theStopList;
+        private System.Windows.Forms.ListBox theComplementList;
     }
 }
 
